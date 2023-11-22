@@ -1,0 +1,23 @@
+﻿@model IEnumerable<NDOANWED2023.Models.Product>
+
+
+<link rel="stylesheet" href="~/Content/Style.css" />
+<div class="Product">
+    @foreach (var item in Model)
+    {
+        <div class="Product-box">
+
+            <div class="Product-box-img-TC">
+                <img src="@Url.Content(item.ProImage)" />
+            </div>
+            <div class="Product-box-name">
+                @Html.ActionLink(item.ProName, "DetailProduct", "DetailsProduct")
+
+            </div>
+
+        </div>
+        <a href="/ShoppingCart/AddToCart/@item.ProID" class="btn btn-default">Buy</a>
+    }
+
+</div>
+

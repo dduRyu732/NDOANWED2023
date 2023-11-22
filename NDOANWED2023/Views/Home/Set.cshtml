@@ -1,0 +1,51 @@
+﻿@model IEnumerable<NDOANWED2023.Models.Product>
+
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<head>
+    <meta charset="utf-8">
+    <title>Noteworthy</title>
+    <link rel="stylesheet" href="~/Content/Style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="TD">
+        <a>SẢN PHẨM</a>
+        <a>Bìa Sổ NoteWorthy</a>
+    </div>
+
+
+    <div class="Product">
+
+    </div>
+    <div class="partialview-set">
+        @Html.Partial("PartialProbycate", Model.Where(p => p.CatID == 4004).ToList())
+    </div>
+    <div class="footer-top">
+        <ul>
+            <li>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <h2 style="color:#f1bc3f">Sổ Tay NoteWorthy</h2>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-center">
+        <P>
+            Địa chỉ cửa hàng: Số 107-D4, ngõ 28C, Lương Định Của, phường Phương Mai, quận Đống Đa, Hà Nội<br>
+            Hotline bán lẻ: 0852272749 (9:00 - 21:30 tất cả các ngày)<br>
+            Liên hệ hợp tác: Số zalo: 0888941295 - 0333146688  / Email: ucm.dulieu@gmail.com<br>
+            Quý đối tác vui lòng gửi yêu cầu hợp tác bằng văn bản qua hình thức nhắn tin zalo / gửi email. Noteworthy sẽ phản hồi lại bằng tin nhắn / email / gọi điện trực tiếp trong vòng 24h làm việc (không tính chủ nhật)
+        </P>
+    </div>
+</body>
+
+
+
+
+
+
